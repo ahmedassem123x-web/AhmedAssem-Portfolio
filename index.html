@@ -175,6 +175,15 @@ html[dir="rtl"] .tape{transform:translateX(-50%) rotate(2.5deg)}
 @media(min-width:641px) and (max-width:960px){
   .paper .p-title{font-size:1.9rem}
 }
+/* Paper title: keep EN title clear of the rotating stamp badge (stamp overlaps the
+   paper's end corner). Reserve the stamp zone on the end side so the title wraps
+   inside the visible paper instead of sliding under the badge. AR untouched. */
+@media(min-width:961px){
+  html:not([lang="ar"]) .paper .p-title{right:150px}
+}
+@media(min-width:641px) and (max-width:960px){
+  html:not([lang="ar"]) .paper .p-title{right:130px}
+}
 
 /* ============ MARQUEE ============ */
 .marquee{background:linear-gradient(90deg,#0050e6,#0066ff,#0050e6);transform:rotate(-.6deg);overflow:hidden;width:100%;
