@@ -104,7 +104,7 @@ main{position:relative;z-index:1}
 .paper{position:absolute;left:6%;right:6%;top:-24px;height:120px;background:linear-gradient(180deg,#ffffff,#dfe9ff);border-radius:12px;
   box-shadow:0 -6px 24px rgba(0,10,50,.25);transform:rotate(.6deg)}
 .paper.p2{left:9%;right:3%;top:-14px;transform:rotate(1.6deg);background:linear-gradient(180deg,#f4f8ff,#cfdefe)}
-.paper .p-title{position:absolute;top:30px;left:0;right:0;text-align:center;font-weight:900;font-size:clamp(1.16rem,3.3vw,1.88rem);color:#0a5cff;letter-spacing:.01em;padding-inline:12px}
+.paper .p-title{position:absolute;top:50%;transform:translateY(-50%);left:0;right:0;text-align:center;font-family:var(--font-black);font-weight:900;font-size:clamp(1.5rem,4.2vw,2.5rem);line-height:1.25;color:#0a5cff;letter-spacing:.01em;padding-inline:12px}
 .folder-word{position:relative;z-index:2;text-align:center;color:#fff;padding-inline-start:34px}
 @media(max-width:640px){.folder-word{padding-inline-start:20px}}
 .folder-word .row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
@@ -170,7 +170,10 @@ html[dir="rtl"] .tape{transform:translateX(-50%) rotate(2.5deg)}
   .hs-web{inset-inline-end:10px!important;top:-42px!important}
   .hs-binder{inset-inline-start:2px!important;width:44px!important}
   .hs-note{inset-inline-end:12px!important;bottom:14px!important}
-  .paper .p-title{padding-inline-start:50px;padding-inline-end:66px;font-size:1.1rem;top:27px}
+  .paper .p-title{padding-inline-start:50px;padding-inline-end:66px;font-size:1.35rem;top:50%;transform:translateY(-50%);line-height:1.25}
+}
+@media(min-width:641px) and (max-width:960px){
+  .paper .p-title{font-size:1.9rem}
 }
 
 /* ============ MARQUEE ============ */
